@@ -3,7 +3,5 @@ __tests__
 node_modules
 erl_crash.dump
 ios/build
-.idea/workspace.xml
-.idea/misc.xml
-.idea/modules.xml
+.DS_Store
 
