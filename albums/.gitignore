@@ -1,7 +1,8 @@
-.idea
 __tests__
 node_modules
 erl_crash.dump
 ios/build
 .DS_Store
+.idea
+
 
