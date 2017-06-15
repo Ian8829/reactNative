@@ -47,10 +47,11 @@ const AlbumDetail = ({ album }) => {
 const styles = {
   headerContentStyle: {
     flexDirection: 'column',
-    justifyContent: 'space-around'
+    justifyContent: 'space-around',
   },
   headerTextStyle: {
-    fontSize: 18
+    fontSize: 18,
+    color: '#910024'
   },
   thumbnailStyle: {
     height: 50,
