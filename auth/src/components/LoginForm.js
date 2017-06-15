@@ -35,7 +35,7 @@ class LoginForm extends Component {
 
   renderButton() {
     if (this.state.loading) {
-      return <Spinner size="small"/>
+      return <Spinner size="small" />;
     }
 
     return (
@@ -46,37 +46,36 @@ class LoginForm extends Component {
   }
 
   render() {
-   return(
-     <Card>
-       <CardSection>
-         <Input
-           placeholder="user@gmail.com"
-           label="Email"
-           value={this.state.email}
-           onChangeText={email => this.setState({ email })}
-         />
-       </CardSection>
+    return (
+      <Card>
+        <CardSection>
+          <Input
+            placeholder="user@gmail.com"
+            label="Email"
+            value={this.state.email}
+            onChangeText={email => this.setState({ email })}
+          />
+        </CardSection>
 
-       <CardSection>
-         <Input
-           secureTextEntry
-           // true
-           placeholder="password"
-           label="Password"
-           value={this.state.password}
-           onChangeText={password => this.setState({ password })}
-         />
-       </CardSection>
+        <CardSection>
+          <Input
+            secureTextEntry
+            placeholder="password"
+            label="Password"
+            value={this.state.password}
+            onChangeText={password => this.setState({ password })}
+          />
+        </CardSection>
 
-       <Text stlye={styles.errorTextStyle}>
-         {this.state.error}
-       </Text>
+        <Text style={styles.errorTextStyle}>
+          {this.state.error}
+        </Text>
 
-       <CardSection>
-         {this.renderButton()}
-       </CardSection>
-     </Card>
-   );
+        <CardSection>
+          {this.renderButton()}
+        </CardSection>
+      </Card>
+    );
   }
 }
 
