@@ -1,11 +1,14 @@
 import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
 
-const Button = () => {
+const Button = ({ onPress }) => {
   const { buttonStyle, textStyle } = styles;
 
   return(
-    <TouchableOpacity style={buttonStyle}>
+    <TouchableOpacity
+      style={buttonStyle}
+      onPress={onPress}
+    >
       <Text style={textStyle}>
         Click me!
       </Text>
@@ -27,10 +30,10 @@ const styles = {
     // expand as possible as i can
     alignSelf: 'stretch',
     // stretch the fills of the container
-    backgroundColor: '#eeffe4',
+    backgroundColor: '#fff8e0',
     borderRadius: 5,
     borderWidth: 1,
-    borderColor: '#fff207',
+    borderColor: '#910024',
     marginLeft: 5,
     marginRight: 5
   }

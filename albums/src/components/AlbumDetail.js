@@ -37,7 +37,9 @@ const AlbumDetail = ({ album }) => {
         />
       </CardSection>
       <CardSection>
-        <Button />
+        <Button
+          onPress={() => console.log(title)}
+        />
       </CardSection>
     </Card>
 
@@ -47,7 +49,7 @@ const AlbumDetail = ({ album }) => {
 const styles = {
   headerContentStyle: {
     flexDirection: 'column',
-    justifyContent: 'space-around',
+    justifyContent: 'space-around'
   },
   headerTextStyle: {
     fontSize: 18,
