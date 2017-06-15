@@ -280,5 +280,5 @@ gradle.properties
 gradlew
 gradlew.bat
 settings.gradle
-android/build
+authTests
 
