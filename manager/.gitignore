@@ -1,0 +1,16 @@
+.idea
+build.gradle
+gradle.properties
+gradlew
+gradlew.bat
+settings.gradle
+authTests
+build
+__tests__
+build.gradle
+gradle.properties
+gradlew
+gradlew.bat
+settings.gradle
+node_modules
+.DS_Store
