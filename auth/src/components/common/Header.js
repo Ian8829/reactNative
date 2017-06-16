@@ -3,7 +3,7 @@ import React from 'react';
 import { Text, View } from 'react-native';
 
 // Make a component
-const Header = (props) => {
+const Header = props => {
   const { textStyle, viewStyle } = styles;
 
   return (
@@ -15,10 +15,11 @@ const Header = (props) => {
 
 const styles = {
   viewStyle: {
-    backgroundColor: '#F8F8F8',
+    backgroundColor: '#fff8e0',
     justifyContent: 'center',
     alignItems: 'center',
     height: 60,
+    // 60px
     paddingTop: 15,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
@@ -27,9 +28,10 @@ const styles = {
     position: 'relative'
   },
   textStyle: {
-    fontSize: 20
+    fontSize: 20,
+    color: '#910024'
   }
 };
 
 // Make the component available to other parts of the app
-export { Header };
+export { Header }
