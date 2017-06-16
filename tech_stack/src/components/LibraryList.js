@@ -3,10 +3,17 @@ import { connect } from 'react-redux';
 
 class LibraryList extends Components {
   render() {
-    return(
-
-    );
+    console.log(this.props);
+    return;
   }
 }
 
-export default connect()(LibraryList);
+const mapStateToProps = state => {
+  return {
+    libraries: state.libraries
+  };
+};
+// take our global state
+// map it the state and use to props
+
+export default connect(mapStateToProps)(LibraryList);
