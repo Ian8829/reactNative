@@ -8,6 +8,16 @@ import * as actions from '../actions';
 // use import * as <A> from <A>...
 
 class ListItem extends Component {
+  renderDescription() {
+    const { library, selectedLibraryId } = this.props;
+
+    if (this.props.library.id === selectedLibraryId) {
+      return(
+        <Text>{library.description}</Text>
+      );
+    }
+  }
+
   render() {
     const { titleStyle } = styles;
     const { id, title } = this.props.library;
@@ -22,6 +32,7 @@ class ListItem extends Component {
               {title}
             </Text>
           </CardSection>
+          {this.renderDescription()}
         </View>
       </TouchableWithoutFeedback>
     );
@@ -35,9 +46,12 @@ const styles = {
   }
 };
 
-export default connect(null, actions)(ListItem);
-// If you don't want to use mapStateToProps
-// You must to put null in the first () for argument
+const mapStateToProps = state => {
+  return { selectedLibraryId: state.selectedLibraryId };
+};
+
+export default connect(mapStateToProps, actions)(ListItem);
+
 // (, actions) return action from action creator
 // all of the actions, pass as props
 
