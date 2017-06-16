@@ -9,7 +9,8 @@ import LibraryList from './components/LibraryList';
 const App = () => {
   return(
     <Provider store={createStore(reducers)}>
-      <View>
+      <View style={{ flex: 1 }}>
+        {/*two {{}}, one is JSX, other one is Object*/}
         <Header headerText="Tech Stack?"/>
         <LibraryList/>
       </View>
