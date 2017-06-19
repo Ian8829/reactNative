@@ -14,12 +14,12 @@ const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
 class App extends Component {
   componentWillMount() {
     const config = {
-      apiKey: "AIzaSyD1C3tUdmMv0ycioVedTedj0_muPrK2fy8",
-      authDomain: "managertree-af0ce.firebaseapp.com",
-      databaseURL: "https://managertree-af0ce.firebaseio.com",
-      projectId: "managertree-af0ce",
-      storageBucket: "managertree-af0ce.appspot.com",
-      messagingSenderId: "739866365430"
+      apiKey: "AIzaSyCT_RUl_NF0rGuUSbzzb-K50ZNt8Dpsmr4",
+      authDomain: "authentication-3a0f0.firebaseapp.com",
+      databaseURL: "https://authentication-3a0f0.firebaseio.com",
+      projectId: "authentication-3a0f0",
+      storageBucket: "authentication-3a0f0.appspot.com",
+      messagingSenderId: "755348762494"
     };
     firebase.initializeApp(config);
   }
