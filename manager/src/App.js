@@ -22,6 +22,8 @@ class App extends Component {
 
   render() {
     const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
+    // {} is any initial state. optional..
+    // Store enhancer third..
     return(
       <Provider store={store}>
         <LoginForm/>
