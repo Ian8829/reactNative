@@ -7,6 +7,8 @@ import ReduxThunk from 'redux-thunk';
 import reducers from './reducers';
 import LoginForm from './components/LoginForm';
 
+const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
+
 class App extends Component {
   componentWillMount() {
     const config = {
@@ -21,7 +23,6 @@ class App extends Component {
   }
 
   render() {
-    const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
     // {} is any initial state. optional..
     // Store enhancer third..
     return(
