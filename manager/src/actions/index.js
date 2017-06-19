@@ -48,6 +48,6 @@ const loginUserSuccess = (dispatch, user) => {
     payload: user
   });
 
-  Actions.employeeList();
-  // Router.js, key="employeeList"
+  Actions.main();
+  // Router.js, key="main"
 };
