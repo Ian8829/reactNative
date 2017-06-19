@@ -16,6 +16,8 @@ const RouterComponent = () => {
 
        <Scene key="main">
          <Scene
+            onRight={() => console.log('right????')}
+            rightTitle="Add"
             key="employeeList"
             component={EmployeeList}
             title="Employees"
