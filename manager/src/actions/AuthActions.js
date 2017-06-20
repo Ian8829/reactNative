@@ -8,14 +8,14 @@ import {
   LOGIN_USER
 } from './types';
 
-export const emailChanged = text => {
+export const emailChanged = (text) => {
   return {
     type: EMAIL_CHANGED,
     payload: text
   };
 };
 
-export const passwordChanged = text => {
+export const passwordChanged = (text) => {
   return {
     type: PASSWORD_CHANGED,
     payload: text
@@ -23,22 +23,22 @@ export const passwordChanged = text => {
 };
 
 export const loginUser = ({ email, password }) => {
-  return dispatch => {
+  return (dispatch) => {
     dispatch({ type: LOGIN_USER });
 
     firebase.auth().signInWithEmailAndPassword(email, password)
-       .then(user => loginUserSuccess(dispatch, user))
-       .catch((error) => {
-         console.log(error);
+      .then(user => loginUserSuccess(dispatch, user))
+      .catch((error) => {
+        console.log(error);
 
-         firebase.auth().createUserWithEmailAndPassword(email, password)
-            .then(user => loginUserSuccess(dispatch, user))
-            .catch(() => loginUserFail(dispatch));
-       });
+        firebase.auth().createUserWithEmailAndPassword(email, password)
+          .then(user => loginUserSuccess(dispatch, user))
+          .catch(() => loginUserFail(dispatch));
+      });
   };
 };
 
-const loginUserFail = dispatch => {
+const loginUserFail = (dispatch) => {
   dispatch({ type: LOGIN_USER_FAIL });
 };
 
@@ -49,5 +49,4 @@ const loginUserSuccess = (dispatch, user) => {
   });
 
   Actions.main();
-  // Router.js, key="main"
 };

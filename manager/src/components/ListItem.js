@@ -5,22 +5,22 @@ import { CardSection } from './common';
 
 class ListItem extends Component {
   onRowPress() {
-    Actions.employeeCreate({ employee: this.props.employee });
+    Actions.employeeEdit({ employee: this.props.employee });
   }
 
   render() {
     const { name } = this.props.employee;
 
-    return(
-       <TouchableWithoutFeedback onPress={this.onRowPress.bind(this)}>
-         <View>
-           <CardSection>
-             <Text style={styles.titleStyle}>
-               {name}
-             </Text>
-           </CardSection>
-         </View>
-       </TouchableWithoutFeedback>
+    return (
+      <TouchableWithoutFeedback onPress={this.onRowPress.bind(this)}>
+        <View>
+          <CardSection>
+            <Text style={styles.titleStyle}>
+              {name}
+            </Text>
+          </CardSection>
+        </View>
+      </TouchableWithoutFeedback>
     );
   }
 }
